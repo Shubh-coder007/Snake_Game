@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+}
+
+/* for class body */
+.body{
+    background: url("../bg.jpg");
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    /* making whole body a flex box, so that we put any element on center */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#board{
+    background: linear-gradient(rgb(126, 126, 226), rgb(69, 125, 139));
+    width: 90vmin;
+    height: 92vmin;
+    border: 2px solid black;
+    /* making grid */
+    display: grid;
+    /* setting grid of 18 rows and 18 columns */
+    grid-template-rows: repeat(18, 1fr);
+    grid-template-columns: repeat(18, 1fr);
+}
+
+#scoreBox{
+    background: yellow;
+    border-radius: 15px;
+    position: absolute;
+    top: 79px;
+    right: 140px;
+    font-size: 35px;
+    font-weight: bold;
+    font-family: 'New Tegomin', serif;
+}
+
+#hiscoreBox{
+    background: yellow;
+    border-radius: 11px;
+    position: absolute;
+    top: 9px;
+    right: 82px;
+    font-size: 35px;
+    font-weight: bold;
+    font-family: 'New Tegomin', serif;
+}
+
+.head{
+    background-color: rgb(255, 145, 0);
+    border: 2px solid purple;
+    transform: scale(1.02);
+    border-radius: 9px;
+}
+
+.snake{
+    background-color: rgb(0, 255, 13);
+    border: .25vmmin solid white;
+    border-radius: 12px;
+}
+
+.food{
+    background-color: yellow;
+    border: .25vmmin solid black;
+    border-radius: 10px;
+}
+
